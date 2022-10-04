@@ -5,14 +5,39 @@ Pour les questions suivantes, vous devez utiliser l'url suivante : https://webho
 Pour tous les appels vous devez ajouter un header pour identifier votre appel parmis ceux des autres étudiants : x-student : VOTRE_NOM
 
 ## Faire un appel curl : copier la commande exécutée et indiquer la requête et la réponse
+curl --header "x_student:yacinekrs" https://webhook.site/6f594809-a4b4-483e-841b-0c3b0a00edfe -v
 
+-la requete:
+
+> GET /6f594809-a4b4-483e-841b-0c3b0a00edfe HTTP/1.1
+> Host: webhook.site
+> User-Agent: curl/7.68.0
+> Accept: */*
+> x_student:yacinekrs
+
+-la reponse :
+
+< HTTP/1.1 200 OK
+< Server: nginx
+< Content-Type: text/plain; charset=UTF-8
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< X-Request-Id: e4e6cb2f-e23b-41ff-8f35-7d8cc69f2f87
+< X-Token-Id: 6f594809-a4b4-483e-841b-0c3b0a00edfe
+< Cache-Control: no-cache, private
+< Date: Tue, 04 Oct 2022 15:04:57 GMT
+<
 
 ## Quel est la version du protocole utilisé par le serveur ?
  on utilise le protocole http et sa version est HTTP/1.1
 
 
 ## Quels sont les headers que l'on envoie dans la requête ? Quels sont leur sens ?
-
+> GET /6f594809-a4b4-483e-841b-0c3b0a00edfe HTTP/1.1
+> Host: webhook.site
+> User-Agent: curl/7.68.0
+> Accept: */*
+> x_student:yacinekrs
 
 ## Quelles informations pouvez-vous trouver à propos du certificat SSL ?
 
