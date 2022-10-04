@@ -8,6 +8,7 @@ Pour tous les appels vous devez ajouter un header pour identifier votre appel pa
 
 
 ## Quel est la version du protocole utilisé par le serveur ?
+ on utilise le protocole http et sa version est HTTP/1.1
 
 
 ## Quels sont les headers que l'on envoie dans la requête ? Quels sont leur sens ?
