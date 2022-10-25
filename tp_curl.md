@@ -78,7 +78,25 @@ reponse:
 < Date: Tue, 25 Oct 2022 15:02:10 GMT
 
 ## Faire un appel curl en envoyant du JSON (avec les bons headers) : copier la commande exécutée et indiquer la requête et la réponse
+curl -H "x-student:yacinekrs" https://webhook.site/8e147a78-4d13-4452-9cc0-468b63433501 -H 'content-type : application/json' --data '{name:yacine}' -v
 
+request:
+> Host: webhook.site
+> User-Agent: curl/7.68.0
+> Accept: */*
+> x-student:yacinekrs
+> content-type: application/json
+> Content-Length: 13
+
+reponse:
+< Server: nginx
+< Content-Type: text/plain; charset=UTF-8
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< X-Request-Id: 26e81b17-be3e-4c04-adac-bab25c07e61d
+< X-Token-Id: 8e147a78-4d13-4452-9cc0-468b63433501
+< Cache-Control: no-cache, private
+< Date: Tue, 25 Oct 2022 15:32:54 GMT
 
 ## Faire une appel curl en envoyant une basic authentication en utilisant 2 méthodes différentes : copier les commandes exécutées et indiquer la requête et la réponse à chaque fois 
 
