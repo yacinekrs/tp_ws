@@ -59,6 +59,7 @@ on trouve la version du certificat ssl utilisé
 
 ## Faire un appel curl en envoyant du texte brut : copier la commande exécutée et indiquer la requête et la réponse
 curl --header "x-student:yacinekrs" https://webhook.site/8e147a78-4d13-4452-9cc0-468b63433501 --data "texte" -v
+
 requete: 
 > Host: webhook.site
 > User-Agent: curl/7.68.0
@@ -80,7 +81,7 @@ reponse:
 ## Faire un appel curl en envoyant du JSON (avec les bons headers) : copier la commande exécutée et indiquer la requête et la réponse
 curl -H "x-student:yacinekrs" https://webhook.site/8e147a78-4d13-4452-9cc0-468b63433501 -H 'content-type : application/json' --data '{name:yacine}' -v
 
-request:
+requete:
 > Host: webhook.site
 > User-Agent: curl/7.68.0
 > Accept: */*
@@ -100,9 +101,47 @@ reponse:
 
 ## Faire une appel curl en envoyant une basic authentication en utilisant 2 méthodes différentes : copier les commandes exécutées et indiquer la requête et la réponse à chaque fois 
 
+curl -H "x-student:yacinekrs" https://webhook.site/8e147a78-4d13-4452-9cc0-468b63433501 -u 'YACINE:yackrs' -v
+
+requete:
+> GET /8e147a78-4d13-4452-9cc0-468b63433501 HTTP/1.1
+> Host: webhook.site
+> Authorization: Basic WUFDSU5FOnlhY2tycw==
+> User-Agent: curl/7.68.0
+> Accept: */*
+> x-student:yacinekrs
+
+reponse:
+< Server: nginx
+< Content-Type: text/plain; charset=UTF-8
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< X-Request-Id: e1ea9a2b-b3f0-4207-946a-2afd8cf041f3
+< X-Token-Id: 8e147a78-4d13-4452-9cc0-468b63433501
+< Cache-Control: no-cache, private
+< Date: Tue, 25 Oct 2022 21:32:58 GMT
+
 
 ## Exécuter la commande suivante avec la méthode GET puis indiquer la réponse : curl https://demo.api-platform.com/books/07dd4786-aaa7-4d08-a467-076b76f1d1b6 
+en executant cette commande, ca sera avec la methode GET par default
 
+reponse:
+< date: Tue, 25 Oct 2022 21:35:19 GMT
+< content-type: application/ld+json; charset=utf-8
+< content-length: 120
+< cache-control: no-cache, private
+< link: <https://demo.api-platform.com/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation",<https://demo.api-platform.com/.well-known/mercure>; rel="mercure"
+< permissions-policy: browsing-topics=()
+< status: 404 Not Found
+< x-content-type-options: nosniff
+< x-frame-options: deny
+< via: 1.1 google
+< cf-cache-status: DYNAMIC
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jkQbttDCPESbZd2Y8tZMULT24XZRkck%2BQJB4ESL6uMTqMP47vhok4azbM6VCkZSExZttmZ9Cv0EMW6jCXfYxAozW4587nv%2BFhE6Tk%2BVFOkR6uofDoFQzz0a9vCFtfJTOQnv4rEI%2F2eA%3D"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 75fe14d4280699f3-CDG
+< alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 ## Exécuter la commande suivante avec la méthode PATCH  puis indiquer la réponse : curl https://demo.api-platform.com/top_books/1
 
