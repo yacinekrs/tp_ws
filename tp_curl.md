@@ -164,21 +164,77 @@ reponse:
 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 ## Quel est le code HTTP reçu ? Quel est sa signification ?
-
+CODE 405 méthode non allouée
 
 ## Exécuter la commande suivante puis indiquer la réponse : curl https://demo.api-platform.com/top_books/1
 
+{"@context":"\/contexts\/TopBook","@id":"\/top_books\/1","@type":"TopBook","id":1,"title":"Depuis l\u0027au-delà","author":"Werber Bernard","part":"","place":"F WER","borrowCount":9}
+
+reponse:
+< date: Tue, 25 Oct 2022 21:50:00 GMT
+< content-type: application/ld+json; charset=utf-8
+< content-length: 183
+< cache-control: no-cache, private
+< etag: "06a23177dff31429d2a7390117fe1b2d"
+< link: <https://demo.api-platform.com/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+< permissions-policy: browsing-topics=()
+< vary: Accept
+< vary: Content-Type
+< vary: Authorization
+< vary: Origin
+< x-content-type-options: nosniff
+< x-frame-options: deny
+< via: 1.1 google
+< cf-cache-status: DYNAMIC
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Xx8K8sQo1psM4yEEBQoCvgghO8IU2gMuM%2FgORpwB3DZMahLRvQIdh5ZttknQG1A8u5bJflNjSQM%2BG2Zyv0fLXBFikaY%2BIhyn9Wc4yzu%2FaAcxuGxsaN1OOQqUISDEG%2BZ6YLKQrZb%2FHXI%3D"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 75fe2a550e0499e1-CDG
+< alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 ## Exécuter la commande suivante puis indiquer la réponse : curl https://demo.api-platform.com/top_books/9999
 
+{"@context":"\/contexts\/Error","@type":"hydra:Error","hydra:title":"An error occurred","hydra:description":"Not Found"} 
+
+reponse:
+< date: Tue, 25 Oct 2022 21:51:23 GMT
+< content-type: application/ld+json; charset=utf-8
+< content-length: 120
+< cache-control: no-cache, private
+< link: <https://demo.api-platform.com/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+< permissions-policy: browsing-topics=()
+< status: 404 Not Found
+< x-content-type-options: nosniff
+< x-frame-options: deny
+< via: 1.1 google
+< cf-cache-status: DYNAMIC
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=54T8digD8sLxpd7PKGiO4y86hmLcvwa%2BMCwxGWHEf3zlht3iowgo7mRYPaRwuw096T5Vt4q8bxgH%2BrWET6XEaPj2oUiuWPblyYsoGN8kXq0MN18JZWDV9JvHO5I1QuWhqeipwqEGX5M%3D"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 75fe2c5b2d72d6ea-CDG
+< alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
 
 ## Quel est le code HTTP ? Que signifie-t-il ?
-
+< HTTP/2 404 
+404: page introuvable
 
 ## Exécuter la requête suivante et copier la réponse : curl https://google.fr
 
+< location: https://www.google.fr/
+< content-type: text/html; charset=UTF-8
+< date: Tue, 25 Oct 2022 21:54:09 GMT
+< expires: Tue, 25 Oct 2022 21:54:09 GMT
+< cache-control: private, max-age=2592000
+< server: gws
+< content-length: 219
+< x-xss-protection: 0
+< x-frame-options: SAMEORIGIN
+< set-cookie: CONSENT=PENDING+395; expires=Thu, 24-Oct-2024 21:54:09 GMT; path=/; domain=.google.fr; Secure
+< p3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+< alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
 
 ## Quel est le code HTTP reçu ? Pouvez-vous expliquer cette réponse ?
-
+< HTTP/2 301 : indique que le contenu de la page n'est plus disponible à l'URL renseignée
 
 ## Comment éviter cette réponse ? Trouvez 2 solutions différentes et détaillez les.
