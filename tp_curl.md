@@ -145,6 +145,23 @@ reponse:
 
 ## Exécuter la commande suivante avec la méthode PATCH  puis indiquer la réponse : curl https://demo.api-platform.com/top_books/1
 
+curl -X PATCH https://demo.api-platform.com/top_books/1 -v
+
+reponse:
+< date: Tue, 25 Oct 2022 21:46:39 GMT
+< content-type: text/html; charset=UTF-8
+< allow: GET
+< cache-control: no-cache, private
+< link: <https://demo.api-platform.com/docs.jsonld>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"
+< permissions-policy: browsing-topics=()
+< status: 405 Method Not Allowed
+< via: 1.1 google
+< cf-cache-status: DYNAMIC
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dtRnv3%2F4CtQ%2BHSQhvA%2FPXrKrh%2Bzho4oEe5BoU2XEcHbcky1h7LKzM4Dd2yhmujkRSLXrEswil7cWYI6xXx5Gx85eO%2Fb9gOJT2O38XVfbe8u4DFDwjFPOmGdRb0XeNgtaOxlff3D2FKs%3D"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 75fe256cfe9199c3-CDG
+< alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
 
 ## Quel est le code HTTP reçu ? Quel est sa signification ?
 
