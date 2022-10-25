@@ -46,7 +46,7 @@ on trouve la version du certificat ssl utilisé
 -Code : 200 veut dire que c'est un succes
 
 ## Quels headers recevez vous dans la response ? Quels sont leur sens ?
-< HTTP/1.1 200 OK  // la version et le status 
+
 < Server: nginx    // le nom du serveur qui a repondu 
 < Content-Type: text/plain; charset=UTF-8 // le type du fichier retourner et le type de caractere utilise
 < Transfer-Encoding: chunked   //forme de l'encodeage pour trandferer toute en securité
@@ -58,7 +58,24 @@ on trouve la version du certificat ssl utilisé
 <
 
 ## Faire un appel curl en envoyant du texte brut : copier la commande exécutée et indiquer la requête et la réponse
+curl --header "x-student:yacinekrs" https://webhook.site/8e147a78-4d13-4452-9cc0-468b63433501 --data "texte" -v
+requete: 
+> Host: webhook.site
+> User-Agent: curl/7.68.0
+> Accept: */*
+> x-student:yacinekrs
+> Content-Length: 5
+> Content-Type: application/x-www-form-urlencoded
 
+reponse:
+< Server: nginx
+< Content-Type: text/plain; charset=UTF-8
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< X-Request-Id: e7affe28-3116-4a48-b336-5d17b503ca3c
+< X-Token-Id: 8e147a78-4d13-4452-9cc0-468b63433501
+< Cache-Control: no-cache, private
+< Date: Tue, 25 Oct 2022 15:02:10 GMT
 
 ## Faire un appel curl en envoyant du JSON (avec les bons headers) : copier la commande exécutée et indiquer la requête et la réponse
 
